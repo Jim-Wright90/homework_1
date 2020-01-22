@@ -1,0 +1,49 @@
+---
+title: "EDLD 610 Winter 2020 Homework 1"
+author: "Jim Wright; Claire Zhang"
+date: "1/22/2020"
+output: html_document
+toc: true
+toc_float: true 
+---
+
+Assignment
+The primary components of this assignment are highly open-ended. These are to
+
+Use at least 3 mutating joins
+Use at least 1 filtering join
+Produce at least 3 data displays
+Following the completion of these requirements, please reproduce the following figure.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE,
+                      echo = FALSE,
+                      fig.width = 10,
+                      fig.height = 10,
+                      dev.args = list(bg="transparent"))
+library(tidyverse)
+library(rio)
+library(here)
+
+assessments <- import(here("data", "assessments.csv"),
+               setclass = "tbl_df")
+
+courses <- import(here("data", "courses.csv"),
+               setclass = "tbl_df")
+
+student_assessment <- import(here("data", "studentAssessment.csv"),
+               setclass = "tbl_df")
+
+student_info <- import(here("data", "studentinfo.csv"),
+               setclass = "tbl_df")
+
+student_registration <- import(here("data", "studentRegistration.csv"),
+               setclass = "tbl_df")
+
+student_vle <- import(here("data", "studentVle.csv"),
+               setclass = "tbl_df")
+
+vle <- import(here("data", "vle.csv"),
+               setclass = "tbl_df")
+```
